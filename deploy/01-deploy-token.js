@@ -2,12 +2,11 @@ const { getNamedAccounts, deployments, network } = require("hardhat")
 const {
   developmentChains,
   INITIAL_SUPPLY,
-  networkConfig,
 } = require("../helper-hardhat-config")
 const { verify } = require("../helper-functions")
 
 module.exports = async ({ getNamedAccounts, deployments }) => {
-  const { deployerm, log } = deployments
+  const { deploy, log } = deployments
   const { deployer } = await getNamedAccounts()
   const ourToken = await deploy("OurToken", {
     from: deployer,
