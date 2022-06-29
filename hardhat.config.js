@@ -1,19 +1,20 @@
-require("@nomiclabs/hardhat-waffle");
-require("@nomiclabs/hardhat-etherscan");
-require("hardhat-deploy");
-require("solidity-coverage");
-require("hardhat-gas-reporter");
-require("hardhat-contract-sizer");
-require("dotenv").config();
+require("@nomiclabs/hardhat-waffle")
+require("@nomiclabs/hardhat-etherscan")
+require("hardhat-deploy")
+require("solidity-coverage")
+require("hardhat-gas-reporter")
+require("hardhat-contract-sizer")
+require("dotenv").config()
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL;
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL
+const PRIVATE_KEY = process.env.PRIVATE_KEY
 // Your API key for Etherscan, obtain one at https://etherscan.io/
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
+const REPORT_GAS = process.env.REPORT_GAS || false
 
 module.exports = {
   defaultNetwork: "hardhat",
@@ -77,4 +78,4 @@ module.exports = {
   mocha: {
     timeout: 200000, // 200 seconds max for running tests
   },
-};
+}
