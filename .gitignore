@@ -16,5 +16,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# gas reporting files
+gas-report.txt
+
 # local env files
 .env*.local
